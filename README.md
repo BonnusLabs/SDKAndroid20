@@ -1,7 +1,8 @@
 # Bonnus SDK Android V2.0
 
-Esta es la documentación para configurar el SDK de Bonnus.
+Configuración del SDK de Bonnus para Android.
 
+- Incluir librería al proyecto:
 Primero hay que agregar el repositorio de maven en el build.gradle a nivel proyectoÑ
 
     allprojects {
