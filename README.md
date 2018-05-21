@@ -27,6 +27,7 @@ Una vez que eso esta hecho, debemos asegurarnos que haya los siguientes permisos
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 - Credenciales para inicio de sesión en la API de Bonnus:
 
