@@ -19,23 +19,9 @@ Configuración del SDK de Bonnus para Android.
 
 - Incluir SDK al proyecto:
 
-Primero hay que agregar el repositorio de maven en el build.gradle a nivel proyecto:
-
-
-    allprojects {
-        repositories {
-            google()
-            jcenter()
-            maven {
-                url  "https://dl.bintray.com/jorshhh/BonnusSDK"
-            }
-        }
-
 Para agregar el SDK, lo incluimos en nuestro build.gradle a nivel modulo de la siguiente manera:
 
-    compile ('mx.bonnus.bonnussdk:bonnus-sdk:2.0.0@aar'){
-        transitive=true
-    }
+    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.0'
 
 Una vez que eso esta hecho, debemos asegurarnos que haya los siguientes permisos en nuestro manifest:
 
