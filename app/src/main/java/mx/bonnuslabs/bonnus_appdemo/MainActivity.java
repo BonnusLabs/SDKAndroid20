@@ -19,9 +19,7 @@ public class MainActivity extends Activity {
 
         //Llamada para configurar el SDK. Se debe realizar sólo una vez, cada que corra la aplicación.
         Bonnus.getInstance().initWithCredentials(getApplicationContext(),
-                "xSc7khPOtO10S3Pm12QSDs8Gro9Snebg",
-                "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik1qUTFNVVJEUVVWRlEwUXpRekl3TXpNek9EVkROa1ZHUkRKRk16Y3lSREU1UWtNelJrTkNRUSJ9.eyJpc3MiOiJodHRwczovL3ZhbG1hbnMuYXV0aDAuY29tLyIsInN1YiI6InhTYzdraFBPdE8xMFMzUG0xMlFTRHM4R3JvOVNuZWJnQGNsaWVudHMiLCJhdWQiOiJodHRwOi8vYm9ubnVzYXBpLmF6dXJld2Vic2l0ZXMubmV0L2FwaSIsImlhdCI6MTUxMTU3ODA4MSwiZXhwIjoxNTI3MTMwMDgxLCJzY29wZSI6Im9wZW5pZDpwcm9maWxlOmVtYWlsIG9wZW5pZCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.JdtPV-ouuQnOquXbaEYXNxn6D8cnVUfke_H9IGsmn-cTerYy7SNFldNxlejJZvjzrqnV02AewyamINKMECrfbHqS_g04A8LDcJ5xabtVhmtkwV0pWxaZjcJ-frAFrzqSiyA_i20lAYNBKseBucDVBxFM7uEAA7PF43g6evXVBG6iW1l7YzgnFFqYkcx2Nu4lcWOM1OMbA274kO-_ECbvFEGqLSfva2VPGgvcpQgKdD9WICyHnxYJEPrjPE5Zm7j8thtR8PF5jzB2mcpnxIy6tejitxPpGqRs6oZ_fWOu07byESPue4VkAY2o7I11jNBylINxDG84R6gfhdQOw8SQtA",
-                "be07223552934a7cbf4e589f80d7e7c0");
+                "","","");
 
 
         String[] carriers = {"Movistar", "At&t 4g"};
