@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:orientation="vertical"
+        tools:context="mx.bonnuslabs.bonnus_appdemo.MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Read Remote Data"
+            android:onClick="readRemoteData"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Momento 1"
+            android:onClick="process"
+            android:tag="Momento1"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Momento 2"
+            android:tag="Momento2"
+            android:onClick="process"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Momento 3"
+            android:tag="Momento3"
+            android:onClick="process"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Momento 4"
+            android:tag="Momento4"
+            android:onClick="process"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Momento 5"
+            android:tag="Momento5"
+            android:onClick="process"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#00ffffff"
+            android:text="Otras funciones"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ver recompensas"
+            android:onClick="recompensas"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Carrier :" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Maker: " />
+
+    </LinearLayout>
+
+
+
+
+
+
