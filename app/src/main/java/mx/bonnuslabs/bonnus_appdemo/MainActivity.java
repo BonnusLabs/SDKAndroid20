@@ -19,12 +19,13 @@ public class MainActivity extends Activity {
 
         //Llamada para configurar el SDK. Se debe realizar sólo una vez, cada que corra la aplicación.
         Bonnus.getInstance().initWithCredentials(getApplicationContext(),
-                "","","");
+            "ParnerId",
+            "token",
+            "sdkId");
 
-
+        // Opcional para limitar el uso por carriers y marca de dispositivo. // Comentar para abrir a todos los carriers y marcas.
         String[] carriers = {"Movistar", "At&t 4g"};
         String[] manufacturers = {"motorola","samsung"};
-
 
         //Bonnus.getInstance().setCarriers(carriers);
         //Bonnus.getInstance().setManufacturers(manufacturers);
