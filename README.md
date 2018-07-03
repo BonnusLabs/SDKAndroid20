@@ -1,5 +1,10 @@
 # Bonnus SDK Android V2.0.1
 
+- Release 30 junio 2018. V2.1.1
+    - Funcionalidad recuperar Bonnus obtenidos anteriormente (Sólo Developer Mode = False)
+    - Encabezado de Listado de Bonnus obtenidos personalizable
+    - Multiples Bonnus por momento
+    
 - Release 12 junio 2018. V2.0.1
     - Soporte Android SDK 15
     - Nueva funcionalidad para revisar si el SDK está activo y tiene el usuario tiene Bonnus ganados
