@@ -1,5 +1,14 @@
 # Bonnus SDK Android V2.0.1
 
+- Release 31 julio 2018. V2.1.3.
+    - Ajustes a los textos del listado de Bonnus obtenidos.
+    - Colores personalizables al listado de Bonnus obtenidos.
+    - Formularios, algunos Bonnus piden obtener información sobre los usuarios (Email, Nombre, Teléfono), esto es configurable desde el Back end de la campaña.
+
+- Release 15 julio 2018. V2.1.2.
+    - Scoll en textos de Bonnus, cuando el texto de Bonnus es muy grande el SDK automuestra un scroll, de esta forma no se corta el texto.
+    - Soporte a multiples tamaños de pantallas.
+    
 - Release 30 junio 2018. V2.1.1
     - Funcionalidad recuperar Bonnus obtenidos anteriormente (Sólo Developer Mode = False)
     - Encabezado de Listado de Bonnus obtenidos personalizable
@@ -123,3 +132,8 @@ Para enseñar la lista de Bonnus obtenidos es necesario llamar a esta función, 
 Ahora la APP puede consultar si el SDK está activo y si el usuario ha ganado Bonnus.
         
         boolean result = Bonnus.getInstance().hasEarnedBonus();
+
+El listado puede ser personalizado con dos parametros:
+-   Titulo / Encabezado, es posible asignar un titulo a la sección.
+       Bonnus.getInstance().setListTitle("Custom Title! :)");
+- Color Background, es posible asignar un color al back del listado, este color, asi como los demás colores del SDK se configuran desde el Backend.
