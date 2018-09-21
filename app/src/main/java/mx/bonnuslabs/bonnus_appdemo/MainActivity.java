@@ -6,12 +6,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import mx.bonnus.bonnussdk.Bonnus;
 
 public class MainActivity extends Activity {
 
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,12 @@ public class MainActivity extends Activity {
 
         TextView carrierView = (TextView)findViewById(R.id.textView);
         TextView manufacturerView = (TextView)findViewById(R.id.textView2);
+        progressBar = (ProgressBar)findViewById(R.id.determinateBar);
 
         carrierView.setText("Carrier: "+carrierName);
         manufacturerView.setText("Manufactured: "+manufacturer);
+
+        Bonnus.getInstance().setListTitle("Custom Title! :)");
 
         Bonnus.getInstance().setDeveloperMode(false);
     }
@@ -71,6 +76,26 @@ public class MainActivity extends Activity {
     }
 
     public void readRemoteData(View view) {
+        progressBar.setVisibility(View.VISIBLE);
+
+        //Suscripción al Listener de la Activación del SDK Config
+        Bonnus.getInstance().onSDKConfigListener(new Bonnus.SDKConfigListener() {
+            @Override
+            public void activeSDKConfig(boolean isActive) {
+
+                progressBar.setVisibility(View.GONE);
+
+                if(isActive){
+                    TextView activeSDKConfigText = (TextView)findViewById(R.id.textView3);
+                    activeSDKConfigText.setText("SDKConfig is active! :)");
+                } else{
+                    TextView activeSDKConfigText = (TextView)findViewById(R.id.textView3);
+                    activeSDKConfigText.setText("SDKConfig is not active! :(");
+                }
+            }
+        });
+
+        //Forzar a Leer el SDK Config desde API
         Bonnus.getInstance().readRemoteData();
     }
 }
