@@ -1,9 +1,29 @@
-# Bonnus SDK Android V2.0
+# Bonnus SDK Android V2.1.4
 
-- Release 9 mayo 2018.
+- Release 19 septiembre 2018. V2.1.4.
+    - Fix pop up al regresar a App.
+    - Ajustes textos salida de la app.
+    - Ajustes a imagenes
+    
+- Release 31 julio 2018. V2.1.3.
+    - Ajustes a los textos del listado de Bonnus obtenidos.
+    - Colores personalizables al listado de Bonnus obtenidos.
+    - Formularios, algunos Bonnus piden obtener información sobre los usuarios (Email, Nombre, Teléfono), esto es configurable desde el Back end de la campaña.
 
-Actualizaciones:
-
+- Release 15 julio 2018. V2.1.2.
+    - Scoll en textos de Bonnus, cuando el texto de Bonnus es muy grande el SDK automuestra un scroll, de esta forma no se corta el texto.
+    - Soporte a multiples tamaños de pantallas.
+    
+- Release 30 junio 2018. V2.1.1
+    - Funcionalidad recuperar Bonnus obtenidos anteriormente (Sólo Developer Mode = False)
+    - Encabezado de Listado de Bonnus obtenidos personalizable
+    - Multiples Bonnus por momento
+    
+- Release 12 junio 2018. V2.0.1
+    - Soporte Android SDK 15
+    - Nueva funcionalidad para revisar si el SDK está activo y tiene el usuario tiene Bonnus ganados
+    
+- Release 9 mayo 2018. V2.0
     - Modo desarrollador. / se implementó la opción de  modo desarrollador para controlarse desde la App.
     - Configuración de colores: Se implemento más colores configurables mejor integración de UX.
     - Plantillas de estilos: Se implementaron plantillas de estilos (Botones, textos, Nofificación, Pop-up) para mejor integración de UX
@@ -11,9 +31,7 @@ Actualizaciones:
     - Soporte diferentes tipos de pantallas: Se incrementó la correcta funcionalidad con diferentes tipos de pantallas.
     - Boton Cerrar notificación: Se incluyó la opción de cerrar la notificación con un botón.
     
-   
-    
-    
+         
     
 Configuración del SDK de Bonnus para Android.
 
@@ -21,7 +39,7 @@ Configuración del SDK de Bonnus para Android.
 
 Para agregar el SDK, lo incluimos en nuestro build.gradle a nivel modulo de la siguiente manera:
 
-    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.0'
+    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.1.4'
 
 Una vez que eso esta hecho, debemos asegurarnos que haya los siguientes permisos en nuestro manifest:
 
@@ -115,3 +133,12 @@ Para procesar una acción:
 Para enseñar la lista de Bonnus obtenidos es necesario llamar a esta función, de esta forma la aplicación puede incluir dentro de se menú o con algún botón en especial.
 
         Bonnus.getInstance().showEarnedBonnusList();
+
+Ahora la APP puede consultar si el SDK está activo y si el usuario ha ganado Bonnus.
+        
+        boolean result = Bonnus.getInstance().hasEarnedBonus();
+
+El listado puede ser personalizado con dos parametros:
+-   Titulo / Encabezado, es posible asignar un titulo a la sección.
+       Bonnus.getInstance().setListTitle("Custom Title! :)");
+- Color Background, es posible asignar un color al back del listado, este color, asi como los demás colores del SDK se configuran desde el Backend.
