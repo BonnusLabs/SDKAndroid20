@@ -1,5 +1,10 @@
-# Bonnus SDK Android V2.0.1
+# Bonnus SDK Android V2.1.4
 
+- Release 19 septiembre 2018. V2.1.4.
+    - Fix pop up al regresar a App.
+    - Ajustes textos salida de la app.
+    - Ajustes a imagenes
+    
 - Release 31 julio 2018. V2.1.3.
     - Ajustes a los textos del listado de Bonnus obtenidos.
     - Colores personalizables al listado de Bonnus obtenidos.
@@ -34,7 +39,7 @@ Configuración del SDK de Bonnus para Android.
 
 Para agregar el SDK, lo incluimos en nuestro build.gradle a nivel modulo de la siguiente manera:
 
-    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.0.1'
+    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.1.4'
 
 Una vez que eso esta hecho, debemos asegurarnos que haya los siguientes permisos en nuestro manifest:
 
