@@ -97,7 +97,9 @@ Nos permite limitar el uso del SDK por dispositivo o por carriers, si se omiten 
         // En este ejmplo se limitará la activación del SDK a dispotivos Samsung y Motorola y carriers "Movistar" y "AT&T 4g".
         
 Modo Desarrollador.
-Es posible inicilizar el SDK como modo desarrollador, de esta forma los desarrolladores solo necesitan borrar el cache de su aplicación para poder utilizar el SDK
+Es posible inicilizar el SDK como modo desarrollador, de esta forma los desarrolladores solo necesitan borrar el cache de su aplicación para poder utilizar el SDK de nuevo.
+
+        Bonnus.getInstance().developerMode(true);
 
 Si el modo desarrollador no esta activado, el uso del SDK y Bonnus ganados se limitarán por dispositivo.
 
