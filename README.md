@@ -1,5 +1,9 @@
-# Bonnus SDK Android V2.1.4
+# Bonnus SDK Android V2.2.1
 
+- Release 19 septiembre 2018. V2.2.1
+    - Segmentación de usuarios
+    - Id usuario personalizado.
+    
 - Release 19 septiembre 2018. V2.1.4.
     - Fix pop up al regresar a App.
     - Ajustes textos salida de la app.
@@ -96,12 +100,29 @@ Nos permite limitar el uso del SDK por dispositivo o por carriers, si se omiten 
         
         // En este ejmplo se limitará la activación del SDK a dispotivos Samsung y Motorola y carriers "Movistar" y "AT&T 4g".
         
+Segmentación de usuarios
+El SDK nos permite tener una segmentación de usuarios la cual puede realizarse con uno o varios campos, las opciones disponibles de segmentación son:
+
+        Bonnus.getInstance().setUserid('')
+        Bonnus.getInstance().setBirthDate('dd/mm/AAAA')
+        Bonnus.getInstance().setZipCode('00000')
+        Bonnus.getInstance().setGeo('LAT','LON')
+        Bonnus.getInstance().setGender('F')
+        
+        Esta configuración debe realizarse antes de llamar al ReadRemoteData.
+        
+
 Modo Desarrollador.
+
 Es posible inicilizar el SDK como modo desarrollador, de esta forma los desarrolladores solo necesitan borrar el cache de su aplicación para poder utilizar el SDK de nuevo.
 
         Bonnus.getInstance().developerMode(true);
 
 Si el modo desarrollador no esta activado, el uso del SDK y Bonnus ganados se limitarán por dispositivo.
+Por otro lado, si se desea configurar un id de usuario especifico debe de ingresarse de la siguiente forma. 
+
+        Bonnus.getInstance().setUserId('idUsuario')
+Si el id de usuario no se establece manualmente el SDK utilizara un GUID en caso de developerMode= true, o el MAC Address en caso de developer mode = false;
 
 
 - Activar el SDK.
@@ -136,9 +157,13 @@ Para enseñar la lista de Bonnus obtenidos es necesario llamar a esta función, 
 
         Bonnus.getInstance().showEarnedBonnusList();
 
-Ahora la APP puede consultar si el SDK está activo y si el usuario ha ganado Bonnus.
+Consulta si el SDK está activo y si el usuario ha ganado Bonnus.
         
         boolean result = Bonnus.getInstance().hasEarnedBonus();
+
+Cantidad de Bonnus obtenidos por usuario
+        
+        Bonnus.getInstance().countEarnedBonus();
 
 El listado puede ser personalizado con dos parametros:
 -   Titulo / Encabezado, es posible asignar un titulo a la sección.
