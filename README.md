@@ -1,8 +1,9 @@
-# Bonnus SDK Android V2.2.1
+# Bonnus SDK Android V2.1.8
 
-- Release 19 septiembre 2018. V2.2.1
+- Release 19 septiembre 2018. V2.1.8
     - Segmentación de usuarios
     - Id usuario personalizado.
+    - Vibración en notificación
     
 - Release 19 septiembre 2018. V2.1.4.
     - Fix pop up al regresar a App.
@@ -164,6 +165,11 @@ Consulta si el SDK está activo y si el usuario ha ganado Bonnus.
 Cantidad de Bonnus obtenidos por usuario
         
         Bonnus.getInstance().countEarnedBonus();
+        
+        
+Vibración al obtener un Bonnus: (notificación)
+        
+        Bonnus.getInstance().setVibrationOnPopUp("true");
 
 El listado puede ser personalizado con dos parametros:
 -   Titulo / Encabezado, es posible asignar un titulo a la sección.
