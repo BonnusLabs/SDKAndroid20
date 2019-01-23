@@ -1,6 +1,10 @@
-# Bonnus SDK Android V2.1.8
+# Bonnus SDK Android V2.1.9
 
-- Release 19 septiembre 2018. V2.1.8
+
+- Release 23 enero 2019. V2.1.8
+    - Encriptación de Datos RSA.
+    
+- Release 19 enero 2019. V2.1.8
     - Segmentación de usuarios
     - Id usuario personalizado.
     - Vibración en notificación
