@@ -48,7 +48,7 @@ Configuración del SDK de Bonnus para Android.
 
 Para agregar el SDK, lo incluimos en nuestro build.gradle a nivel modulo de la siguiente manera:
 
-    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.1.4'
+    compile 'mx.bonnus.bonnuslabs:bonnussdk:2.1.9'
 
 Una vez que eso esta hecho, debemos asegurarnos que haya los siguientes permisos en nuestro manifest:
 
